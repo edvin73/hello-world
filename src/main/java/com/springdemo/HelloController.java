@@ -16,7 +16,7 @@ public class HelloController {
 		return "Welcome : " + name;
 	}
 	
-	@GetMapping(value = "/date")
+	@GetMapping(value = "/now")
 	public String getDate( ) {
 		
 		String val = LocalDateTime.now().toString();
