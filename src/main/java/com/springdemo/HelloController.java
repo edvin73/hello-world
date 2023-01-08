@@ -19,7 +19,17 @@ public class HelloController {
 	@GetMapping(value = "/now")
 	public String getDate( ) {
 		
-		String val = LocalDateTime.now().toString();
+		
+		
+		int year = LocalDateTime.now().getYear();
+		int month = LocalDateTime.now().getMonth().getValue();
+		int day = LocalDateTime.now().getDayOfMonth();
+		
+		int hour = LocalDateTime.now().getHour();
+		int minute = LocalDateTime.now().getMinute();
+		int sec = LocalDateTime.now().getSecond();
+		
+		String val = day + "/"+ month + "/" + year + " " +  hour + ":" + minute + ":" + sec;
 		
 		return val;
 	}
